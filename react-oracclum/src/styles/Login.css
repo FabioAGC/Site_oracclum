@@ -1,0 +1,353 @@
+/* Tema inspirado em Zelda para o Login */
+:root {
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #5da6a7; /* Cor da túnica de Zora */
+  --hyruleBrown: #5d4037;
+  --hyruleGold: #fbcb2d;
+  --hyruleGreen: #6d9c3b;
+  --triforceYellow: #ffd700;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+}
+
+.login-page {
+  background-color: #fefcf4;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf-reverse.svg");
+  background-repeat: repeat;
+  background-size: 300px;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(254, 252, 244, 0.85);
+  z-index: 0;
+}
+
+.background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.triforce {
+  display: none;
+}
+
+.triforce img {
+  display: none;
+}
+
+.triforce-1, .triforce-3, .triforce-4 {
+  display: none;
+}
+
+.decorative-element {
+  position: absolute;
+  z-index: -1;
+}
+
+.plant-1 {
+  width: 100px;
+  height: 300px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/plant-big.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -30px;
+  left: 5%;
+  opacity: 0.6;
+}
+
+.plant-2 {
+  width: 70px;
+  height: 120px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/plant-small.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 30%;
+  left: 8%;
+  opacity: 0.6;
+}
+
+.plant-3 {
+  width: 150px;
+  height: 200px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/plant-medium.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 10%;
+  right: 5%;
+  opacity: 0.6;
+}
+
+.lines-1 {
+  width: 100px;
+  height: 100px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/line-star-big.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20%;
+  left: 15%;
+  opacity: 0.4;
+  transform: rotate(15deg);
+}
+
+.lines-2 {
+  width: 80px;
+  height: 80px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/line-star-big.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 20%;
+  right: 15%;
+  opacity: 0.4;
+  transform: rotate(-15deg);
+}
+
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/blob-1.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/blob-1.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3;
+  transform: rotate(180deg);
+}
+
+.mesh-1, .mesh-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/mesh.svg');
+  background-size: 800px;
+  background-repeat: repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--hyruleGold);
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(
+    to right,
+    var(--hyruleGold) 0%,
+    #ffd700 20%,
+    var(--hyruleGold) 40%,
+    #fceabb 50%,
+    var(--hyruleGold) 60%, 
+    #ffd700 80%,
+    var(--hyruleGold) 100%
+  );
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(
+    to right,
+    var(--hyruleGold) 0%,
+    #ffd700 20%,
+    var(--hyruleGold) 40%,
+    #fceabb 50%,
+    var(--hyruleGold) 60%, 
+    #ffd700 80%,
+    var(--hyruleGold) 100%
+  );
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.login-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--headerColor);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--hyruleGold);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.login-subtitle {
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  color: var(--bodyTextColor);
+  margin-top: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--headerColor);
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  color: var(--bodyTextColor);
+  background-color: #fefcf4;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 106, 62, 0.2);
+}
+
+.error-message {
+  font-family: var(--bodyFont);
+  font-size: 0.875rem;
+  color: #e74c3c;
+  margin-top: 0.5rem;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--hyruleGold);
+}
+
+.login-button::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: rotate(45deg);
+  top: -50px;
+  left: -100px;
+  transition: all 0.6s ease;
+}
+
+.login-button:hover::after {
+  left: 120%;
+}
+
+.login-button:hover {
+  background-color: #e74c3c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+} 

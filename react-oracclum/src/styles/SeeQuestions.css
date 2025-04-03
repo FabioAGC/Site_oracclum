@@ -1,0 +1,345 @@
+.see-questions-page {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bodyFont);
+  background-color: #fefcf4;
+  padding-top: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.questions-section {
+  padding: var(--sectionPadding);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cs-container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cs-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cs-topper {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1em;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.cs-title {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 43.75rem;
+  margin: 0 auto 1rem;
+  color: var(--headerColor);
+  position: relative;
+  font-family: var(--headingFont);
+}
+
+.cs-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0 auto;
+  color: var(--bodyTextColor);
+}
+
+/* Estilos para os botões de navegação */
+.nav-container {
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background-color: #fefcf4;
+  width: 100%;
+  box-shadow: none;
+  backdrop-filter: none;
+  margin-bottom: 10px;
+}
+
+.nav-button {
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  min-width: 150px;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: var(--primaryLight);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button {
+  background-color: #e74c3c;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.footer-nav {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #faf6f2;
+  width: 100%;
+  gap: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primaryLight);
+  box-shadow: 0 0 5px rgba(255, 106, 62, 0.3);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.question-count {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--bodyTextColor);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.question-card {
+  position: relative;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: #faf6f2;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question-text {
+  font-size: 1.1rem;
+  color: var(--headerColor);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.question-date {
+  font-size: 0.85rem;
+  color: var(--bodyTextColor);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.answer-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.answer-text {
+  font-size: 1rem;
+  color: var(--bodyTextColor);
+  line-height: 1.6;
+  background-color: rgba(255, 106, 62, 0.05);
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.answer-text::before {
+  content: '"';
+  font-family: var(--headingFont);
+  font-size: 3rem;
+  color: rgba(255, 106, 62, 0.2);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.loading-message,
+.error-message,
+.no-questions-message {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+}
+
+.loading-message {
+  color: #0066cc;
+}
+
+.error-message {
+  color: #d32f2f;
+}
+
+.no-questions-message {
+  color: var(--bodyTextColor);
+}
+
+.no-questions-container {
+  text-align: center;
+  padding: 30px;
+  background-color: #faf6f2;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.hint-message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--bodyTextColor);
+  font-style: italic;
+}
+
+.info-message {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border-left: 4px solid #1976d2;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .question-card {
+    padding: 20px;
+  }
+  
+  .cs-title {
+    font-size: 1.75rem;
+  }
+  
+  .search-input {
+    max-width: 100%;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  .nav-button {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-nav .nav-button {
+    width: 100%;
+  }
+}
+
+/* Novos estilos para informações de conexão */
+.connection-info, 
+.connection-status {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.connection-status {
+  font-style: italic;
+  background-color: transparent;
+  opacity: 0.8;
+}
+
+.retry-button, 
+.retry-button-small {
+  background-color: #ff6a3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.retry-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+.retry-button-small {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.retry-button:hover,
+.retry-button-small:hover {
+  background-color: #e74c3c;
+} 

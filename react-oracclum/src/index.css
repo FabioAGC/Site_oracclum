@@ -1,0 +1,138 @@
+:root {
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --headingFont: 'Playfair Display', serif;
+    --bodyFont: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--bodyFont);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.cs-topper {
+    font-family: var(--bodyFont);
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-family: var(--headingFont);
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-family: var(--bodyFont);
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+
+/* Estilos para os cipós */
+.vine-decoration {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vine-top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.vine-top-left {
+    top: 0;
+    left: 0;
+}
+
+.vine-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.vine-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.vine-middle-right {
+    top: 50%;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.vine-middle-left {
+    top: 50%;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.vine-corner-top-right {
+    top: 20%;
+    right: 10%;
+    transform: rotate(135deg);
+}
+
+.vine-corner-top-left {
+    top: 20%;
+    left: 10%;
+    transform: rotate(-135deg);
+}
+
+.vine-small {
+    width: 100px;
+}
+
+.vine-large {
+    width: 200px;
+}
+
+/* Ajuste para garantir que o conteúdo fique sobre os cipós */
+.cs-content {
+    position: relative;
+    z-index: 1;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}

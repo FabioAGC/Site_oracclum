@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+.cs-topper {
+  font-family: var(--bodyFont);
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.cs-title {
+  font-family: var(--headingFont);
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+.cs-text {
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-align: center;
+  text-decoration: none;
+  min-width: 9.375rem;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  color: var(--headerColor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.nav-button:hover {
+  background-color: var(--primaryLight);
+}
+
+.cs-button-solid {
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-align: center;
+  text-decoration: none;
+  min-width: 9.375rem;
+  margin: 0;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  color: var(--headerColor);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+} 

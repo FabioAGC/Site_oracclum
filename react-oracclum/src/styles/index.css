@@ -1,0 +1,33 @@
+:root {
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  --headingFont: 'Playfair Display', serif;
+  --bodyFont: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bodyFont);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fefcf4;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
